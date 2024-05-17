@@ -1,29 +1,26 @@
 #include<iostream>
-
 using namespace std;
-
-#define Max 100  // So phan tu toi da cua Stack
-struct Stack {
-    int Top;  // phan tu xac dinh dinh ngan xep
+#define Max 100 
+struct Stack 
+{
+    int Top;  
     int Data[Max];
 };
+void Init(Stack* S) 
+{
+    S->Top = -1;
 
-// Khoi tao ngan xep
-void Init(Stack* S) {
-    S->Top = -1;  // Dinh ngan xep ban dau la -1, chua co phan tu nao
-}
-
-// Kiem tra ngan xep rong
-int Isempty(Stack S) {
+int Isempty(Stack S) 
+{
     return (S.Top == -1);
 }
-
-// Kiem tra ngan xep day
-int Isfull(Stack S) {
+int Isfull(Stack S) 
+{
     return (S.Top == Max - 1);
 }
 
-void Push(Stack& S, int x) {
+void Push(Stack& S, int x)
+{
     if (Isfull(S))
         cout << "\nNgan xep day!" << endl;
     else {
@@ -31,11 +28,12 @@ void Push(Stack& S, int x) {
         S.Data[S.Top] = x;
     }
 }
-
-int Pop(Stack& S) {
-    if (Isempty(S)) {
+int Pop(Stack& S) 
+{
+    if (Isempty(S)) 
+    {
         cout << "\nNgan xep rong!" << endl;
-        return -1;  // Gia tri tra ve khi ngan xep rong
+        return -1;  // Gia tri tra ve khi rong
     } else {
         int x = S.Data[S.Top];
         S.Top--;
@@ -43,7 +41,8 @@ int Pop(Stack& S) {
     }
 }
 
-void Input(Stack& S) {
+void Input(Stack& S) 
+{
     cout << "\nNhap gia tri (0 de ket thuc nhap): " << endl;
     int x;
     do {
@@ -52,13 +51,13 @@ void Input(Stack& S) {
             Push(S, x);
     } while (x != 0);
 }
-
-void Output(Stack S) {
+void Output(Stack S) 
+{
     while (!Isempty(S))
         cout << "  " << Pop(S);
 }
-
-void PrintStack(Stack S) {
+void PrintStack(Stack S) 
+{
     cout << "Trang thai cua Stack: ";
     for (int i = 0; i <= S.Top; i++) {
         cout << S.Data[i] << " ";
@@ -66,7 +65,8 @@ void PrintStack(Stack S) {
     cout << endl;
 }
 
-int main() {
+int main() 
+{
     Stack s;
     Init(&s);  // Khoi tao ngan xep
 
