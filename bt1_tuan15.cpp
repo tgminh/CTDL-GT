@@ -126,6 +126,11 @@ int main() {
 
     if (n1 != NULL)
         cout << "Sinh vien voi SBD=4 la " << n1->hoTen << endl;
+    if (n1 == NULL)
+        cout << "Khong tim thay sinh vien voi SBD=4" << endl;
+
+    if (n2 != NULL)
+        cout << "Sinh vien voi SBD=9 la " << n1->hoTen << endl;
     if (n2 == NULL)
         cout << "Khong tim thay sinh vien voi SBD=9" << endl;
         
