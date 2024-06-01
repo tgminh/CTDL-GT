@@ -113,7 +113,7 @@ private:
 int main() {
     BSTree bst;
 
-    bst.insert(9, "Tuan");
+    bst.insert(1, "Tuan");
     bst.insert(6, "Lan");
     bst.insert(3, "Cong");
     bst.insert(8, "Huong");
@@ -130,7 +130,7 @@ int main() {
         cout << "Khong tim thay sinh vien voi SBD=4" << endl;
 
     if (n2 != NULL)
-        cout << "Sinh vien voi SBD=9 la " << n1->hoTen << endl;
+        cout << "Sinh vien voi SBD=9 la " << n2->hoTen << endl;
     if (n2 == NULL)
         cout << "Khong tim thay sinh vien voi SBD=9" << endl;
         
