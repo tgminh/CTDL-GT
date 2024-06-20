@@ -38,7 +38,6 @@ int main() {
         cout << "Hai cuon sach khong phai la ban copy cua nhau" << endl;
     }
 
-    // Clean up memory
     delete root1->left;
     delete root1->right;
     delete root1;
